@@ -3,7 +3,7 @@ const baseCall = "http://api.weatherapi.com/v1/current.json?key=8b0e1e1916d64ea9
 
 
 async function fetchData(message) {
-    const response = await fetch(baseCall + message);
+    const response = await fetch(baseCall + message, {mode: 'cors'});
     const data = await response.json();
     return data;
 }
