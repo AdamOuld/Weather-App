@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fetchData: () => (/* binding */ fetchData)\n/* harmony export */ });\n\r\nconst baseCall = \"http://api.weatherapi.com/v1/current.json?key=8b0e1e1916d64ea9aa3192217242703&q=\"\r\n\r\n\r\nasync function fetchData(message) {\r\n    const response = await fetch(baseCall + message);\r\n    const data = await response.json();\r\n    return data;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://weather-app/./src/logic.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fetchData: () => (/* binding */ fetchData)\n/* harmony export */ });\n\r\nconst baseCall = \"https://api.weatherapi.com/v1/current.json?key=8b0e1e1916d64ea9aa3192217242703&q=\"\r\n\r\n\r\nasync function fetchData(message) {\r\n    const response = await fetch(baseCall + message, {mode: 'cors'});\r\n    const data = await response.json();\r\n    return data;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://weather-app/./src/logic.js?");
 
 /***/ })
 
